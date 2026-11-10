@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>CampusMark — College Attendance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="authGate" class="auth-gate"></div>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="CampusMark home">
+          <span class="brand-mark"><span></span><span></span><span></span><span></span></span>
+          <span>campus<span class="brand-light">mark</span></span>
+        </a>
+        <div class="campus-switcher">
+          <div class="campus-icon">NC</div>
+          <div class="campus-copy"><strong>Northfield College</strong><span>Campus portal</span></div>
+          <span class="switch-chevron">⌄</span>
+        </div>
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-page="dashboard"><span class="nav-icon">◫</span>Overview</button>
+          <button class="nav-item" data-page="attendance"><span class="nav-icon">▣</span>Take attendance</button>
+          <button class="nav-item" data-page="students"><span class="nav-icon">♙</span>Students</button>
+          <button class="nav-item" data-page="courses"><span class="nav-icon">▤</span>Courses</button>
+          <button class="nav-item" data-page="reports"><span class="nav-icon">▥</span>Reports</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card"><div class="help-icon">?</div><strong>Need a hand?</strong><p>Your attendance workspace is ready. Add students and courses to get started.</p></div>
+          <div class="profile">
+            <div class="avatar avatar-purple">AD</div>
+            <div class="profile-copy"><strong>Alexandra Davis</strong><span>Administrator</span></div>
+            <button class="more-button" data-action="logout" aria-label="Sign out" title="Sign out">↪</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumbCurrent">Overview</strong></div>
+          <div class="topbar-right">
+            <span class="today-label" id="todayLabel"></span>
+            <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
+            <div class="avatar avatar-purple top-avatar">AD</div>
+          </div>
+        </header>
+        <div class="page-content" id="pageContent"></div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal" class="modal"></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
